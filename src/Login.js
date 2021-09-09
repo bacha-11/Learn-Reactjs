@@ -1,13 +1,17 @@
-import {useState} from 'react'
+import { useState } from 'react'
 
-function Login(){
+function Login(props) {
 
-    const [data, setdata] = useState(0)
-    
-    return(
-        <h1>Welcome Mr. {data}</h1>
+
+
+    return (
+        <div>
+            <h1>Welcome Mr. {props.name}</h1>
+            <h1>Email : {props.email}</h1>
+        </div>
+
     )
-    
+
 }
 
 export default Login;

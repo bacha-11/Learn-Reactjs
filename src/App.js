@@ -10,20 +10,18 @@ import { useState } from 'react';
 
 
 function App() {
-  let [data, setdata] = useState(0)
-
-  function app2()
-  {
-    setdata(data+1)
-  }
-    
+  let [name, setname] = useState('ijaz')
+  let [email, setemail] = useState('ijaz@z.com')
   return (
-      <div className="App">
-        <h1>{data}</h1>
-        <button onClick={app2}> Click Me </button>
-        <Login />
-      </div>
-    );
+    <div className="App">
+      <h1>Hello World</h1>
+      <button onClick={() => {
+        setname('bacha')
+        setemail('bacha@z.com')
+      }}> Click Me </button>
+      <Login name={name} email={email} />
+    </div>
+  );
 }
 
 
