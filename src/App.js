@@ -6,6 +6,7 @@ import User from './User';
 import Home from './Home';
 import ClassCom from './ClassCom';
 import { useState } from 'react';
+import GetFormData from './GetFormData';
 
 
 
@@ -25,7 +26,9 @@ function App() {
 
       <Home /><br/><br />
 
-      <User />
+      <User /><br /><br />
+
+      <GetFormData />
 
     </div>
   );
