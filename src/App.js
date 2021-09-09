@@ -23,7 +23,9 @@ function App() {
 
       <Login name={name} email={email} other={{address:'abc', phone:'1111'}}/>
 
-      <Home />
+      <Home /><br/><br />
+
+      <User />
 
     </div>
   );
