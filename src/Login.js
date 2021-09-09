@@ -8,6 +8,8 @@ function Login(props) {
         <div>
             <h1>Welcome Mr. {props.name}</h1>
             <h1>Email : {props.email}</h1>
+            <h1>Address : {props.other.address}</h1>
+            <h4>Phone : {props.other.phone} </h4>
         </div>
 
     )

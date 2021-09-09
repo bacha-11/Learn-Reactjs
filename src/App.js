@@ -15,11 +15,16 @@ function App() {
   return (
     <div className="App">
       <h1>Hello World</h1>
+
       <button onClick={() => {
         setname('bacha')
         setemail('bacha@z.com')
       }}> Click Me </button>
-      <Login name={name} email={email} />
+
+      <Login name={name} email={email} other={{address:'abc', phone:'1111'}}/>
+
+      <Home />
+
     </div>
   );
 }
