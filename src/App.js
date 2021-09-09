@@ -7,6 +7,7 @@ import Home from './Home';
 import ClassCom from './ClassCom';
 import { useState } from 'react';
 import GetFormData from './GetFormData';
+import Condition from './IfElse';
 
 
 
@@ -15,7 +16,7 @@ function App() {
   let [email, setemail] = useState('ijaz@z.com')
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <h1>Hello guest</h1>
 
       <button onClick={() => {
         setname('bacha')
@@ -29,6 +30,8 @@ function App() {
       <User /><br /><br />
 
       <GetFormData />
+
+      <Condition />
 
     </div>
   );
