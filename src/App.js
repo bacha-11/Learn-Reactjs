@@ -12,12 +12,14 @@ import Constructor from './Constructor';
 import ComponentDidMountExample from './ComponentDidMount';
 import ComponentDidUpdateExample from './ComponentDidUpdate';
 import ShouldComponentUpdateExample from './ShouldComponentUpdate';
+import ComponentWillUnMountExample from './ComponentWillUnmount';
 
 
 
 function App() {
   let [name, setname] = useState('ijaz')
   let [email, setemail] = useState('ijaz@z.com')
+  let [show, setshow] = useState(true)
   return (
     <div className="App">
       <h1>Hello guest</h1>
@@ -44,7 +46,16 @@ function App() {
 
       <ComponentDidUpdateExample /><br /><br />
 
-      <ShouldComponentUpdateExample />
+      <ShouldComponentUpdateExample /><br /><br />
+
+
+      show?
+      <ComponentWillUnMountExample />
+      :<h1>compontent is been removed</h1>
+
+      <button onClick={()=>{setshow(!show)}}>toggle</button>
+
+      
 
 
     </div>
