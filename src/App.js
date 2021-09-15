@@ -9,6 +9,7 @@ import { useState } from 'react';
 import GetFormData from './GetFormData';
 import Condition from './IfElse';
 import Constructor from './Constructor';
+import ComponentDidMountExample from './ComponentDidMount';
 
 
 
@@ -35,7 +36,9 @@ function App() {
       <Condition /><br /><br />
 
 
-      <Constructor data={'abc'}/>
+      <Constructor data={'abc'}/><br /><br />
+
+      <ComponentDidMountExample />
 
     </div>
   );
