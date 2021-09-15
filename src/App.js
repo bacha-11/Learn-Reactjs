@@ -14,6 +14,7 @@ import ComponentDidUpdateExample from './ComponentDidUpdate';
 import ShouldComponentUpdateExample from './ShouldComponentUpdate';
 import ComponentWillUnMountExample from './ComponentWillUnmount';
 import UseStateHook from './UseStateHook';
+import UseEffectHook from './UseEffectHook';
 
 
 
@@ -59,6 +60,8 @@ function App() {
       <button onClick={()=>{setshow(!show)}}>toggle</button>
 
       <UseStateHook />
+
+      <UseEffectHook />
 
 
       
