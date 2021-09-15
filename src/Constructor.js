@@ -3,10 +3,10 @@ import React from 'react'
 
 
 class Constructor extends React.Component{
-    constructor(){
+    constructor(props){
         super()
         this.state = {
-            "name": 'abcd',
+            "name": props.data,
             "age":10
         }
     }

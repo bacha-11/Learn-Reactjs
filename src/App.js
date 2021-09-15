@@ -35,7 +35,7 @@ function App() {
       <Condition /><br /><br />
 
 
-      <Constructor />
+      <Constructor data={'abc'}/>
 
     </div>
   );
