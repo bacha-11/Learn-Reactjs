@@ -10,6 +10,7 @@ import GetFormData from './GetFormData';
 import Condition from './IfElse';
 import Constructor from './Constructor';
 import ComponentDidMountExample from './ComponentDidMount';
+import ComponentDidUpdateExample from './ComponentDidUpdate';
 
 
 
@@ -38,7 +39,10 @@ function App() {
 
       <Constructor data={'abc'}/><br /><br />
 
-      <ComponentDidMountExample />
+      <ComponentDidMountExample /><br /><br />
+
+      <ComponentDidUpdateExample />
+
 
     </div>
   );
