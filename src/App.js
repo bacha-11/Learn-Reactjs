@@ -13,6 +13,7 @@ import ComponentDidMountExample from './ComponentDidMount';
 import ComponentDidUpdateExample from './ComponentDidUpdate';
 import ShouldComponentUpdateExample from './ShouldComponentUpdate';
 import ComponentWillUnMountExample from './ComponentWillUnmount';
+import UseStateHook from './UseStateHook';
 
 
 
@@ -49,11 +50,16 @@ function App() {
       <ShouldComponentUpdateExample /><br /><br />
 
 
+      {
       show?
       <ComponentWillUnMountExample />
       :<h1>compontent is been removed</h1>
+      }
 
       <button onClick={()=>{setshow(!show)}}>toggle</button>
+
+      <UseStateHook />
+
 
       
 
