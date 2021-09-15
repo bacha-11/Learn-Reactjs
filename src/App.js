@@ -11,6 +11,7 @@ import Condition from './IfElse';
 import Constructor from './Constructor';
 import ComponentDidMountExample from './ComponentDidMount';
 import ComponentDidUpdateExample from './ComponentDidUpdate';
+import ShouldComponentUpdateExample from './ShouldComponentUpdate';
 
 
 
@@ -41,7 +42,9 @@ function App() {
 
       <ComponentDidMountExample /><br /><br />
 
-      <ComponentDidUpdateExample />
+      <ComponentDidUpdateExample /><br /><br />
+
+      <ShouldComponentUpdateExample />
 
 
     </div>
