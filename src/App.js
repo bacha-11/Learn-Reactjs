@@ -15,6 +15,7 @@ import ShouldComponentUpdateExample from './ShouldComponentUpdate';
 import ComponentWillUnMountExample from './ComponentWillUnmount';
 import UseStateHook from './UseStateHook';
 import UseEffectHook from './UseEffectHook';
+import { Button } from 'react-bootstrap';
 
 
 
@@ -57,7 +58,7 @@ function App() {
       :<h1>compontent is been removed</h1>
       }
 
-      <button onClick={()=>{setshow(!show)}}>toggle</button>
+      <Button onClick={()=>{setshow(!show)}}>toggle</Button>
 
       <UseStateHook />
 
