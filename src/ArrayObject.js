@@ -11,6 +11,25 @@ function ArrayObject(){
         {name:'tariq', email:'tariq@test.com', age:40}
     ]
 
+    const user = [
+        {name:'ijaz', email:'ijaz@test.com', address:[
+            {house:'11', country:"pakistan"},
+            {house:'12', country:"pakistan"}
+        ]},
+        {name:'zaid', email:'zaid@test.com', address:[
+            {house:'111', country:"pakistan"},
+            {house:'121', country:"pakistan"}
+        ]},
+        {name:'nisar', email:'nisar@test.com', address:[
+            {house:'112', country:"pakistan"},
+            {house:'122', country:"pakistan"}
+        ]},
+        {name:'tariq', email:'tariq@test.com', address:[
+            {house:'113', country:"pakistan"},
+            {house:'123', country:"pakistan"}
+        ]}
+    ]
+
     return(
         <div>
         {
@@ -36,6 +55,39 @@ function ArrayObject(){
             }
             </tbody>
                  
+            </Table>
+
+
+            <Table variant='dark' striped>
+                <tbody>
+                <tr>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>age</th>
+                </tr>
+            {
+                user.map((item, i)=>
+                <tr key={i}>
+                    <td>{item.name}</td>
+                    <td>{item.email}</td>
+                    <td>
+                    <Table variant='dark' striped>
+                    <tbody>
+                        {
+                        item.address.map((data, j)=>
+                        <tr key={j}>
+                            <td>{data.house}</td>
+                            <td>{data.country}</td>
+                        </tr>
+                        )
+                        }
+                    </tbody>
+                    </Table>
+                    </td>
+                </tr>
+                )
+            }
+                </tbody>
             </Table>
         </div>
     )
