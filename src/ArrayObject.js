@@ -1,4 +1,4 @@
-
+import {Table} from 'react-bootstrap';
 
 
 function ArrayObject(){
@@ -14,27 +14,29 @@ function ArrayObject(){
     return(
         <div>
         {
-            names.map((item)=>
-                <h3>{item}</h3>
+            names.map((item, index)=>
+                <h3 key={index}>{item}</h3>
             )
         }
-            <table>
+            <Table>
+            <tbody>
                 <tr>
                     <th>name</th>
                     <th>email</th>
                     <th>age</th>
                 </tr>
             {
-                students.map((item)=>
-                    <tr>
+                students.map((item, i)=>
+                <tr key={i}>
                     <td>{item.name}</td>
                     <td>{item.email}</td>
                     <td>{item.age}</td>
                 </tr>
                 )
             }
+            </tbody>
                  
-            </table>
+            </Table>
         </div>
     )
 }
