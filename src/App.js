@@ -16,6 +16,7 @@ import ComponentWillUnMountExample from './ComponentWillUnmount';
 import UseStateHook from './UseStateHook';
 import UseEffectHook from './UseEffectHook';
 import { Button } from 'react-bootstrap';
+import ArrayObject from './ArrayObject';
 
 
 
@@ -64,7 +65,7 @@ function App() {
 
       <UseEffectHook />
 
-
+      <ArrayObject />
       
 
 
