@@ -8,6 +8,7 @@ import ClassCom from './ClassCom';
 import { useState } from 'react';
 import GetFormData from './GetFormData';
 import Condition from './IfElse';
+import Constructor from './Constructor';
 
 
 
@@ -29,9 +30,12 @@ function App() {
 
       <User /><br /><br />
 
-      <GetFormData />
+      <GetFormData /><br /><br />
 
-      <Condition />
+      <Condition /><br /><br />
+
+
+      <Constructor />
 
     </div>
   );
