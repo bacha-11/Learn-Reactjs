@@ -23,6 +23,8 @@ import PureComponents from './PureComponent'
 import UseMemoHook from './UseMemoHook';
 import Ref from './Ref';
 import UseRefHook from './UseRefHook';
+import Display from './HighOrderComponent';
+
 
 
 
@@ -89,7 +91,10 @@ function App() {
 
       <Ref /><br /><br />
 
-      <UseRefHook />
+      <UseRefHook /><br /><br />
+
+      <Display />
+      
       
 
 
