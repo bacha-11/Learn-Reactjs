@@ -5,7 +5,7 @@ import { Logout } from './Logout';
 import User from './User';
 import Home from './Home';
 import ClassCom from './ClassCom';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import GetFormData from './GetFormData';
 import Condition from './IfElse';
 import Constructor from './Constructor';
@@ -17,6 +17,7 @@ import UseStateHook from './UseStateHook';
 import UseEffectHook from './UseEffectHook';
 import { Button } from 'react-bootstrap';
 import ArrayObject from './ArrayObject';
+import Fragments from './Fragment';
 
 
 
@@ -61,11 +62,13 @@ function App() {
 
       <Button onClick={()=>{setshow(!show)}}>toggle</Button>
 
-      <UseStateHook />
+      <UseStateHook /><br /><br />
 
-      <UseEffectHook />
+      <UseEffectHook /><br /><br />
 
-      <ArrayObject />
+      <ArrayObject /><br /><br />
+
+      <Fragments />
       
 
 
