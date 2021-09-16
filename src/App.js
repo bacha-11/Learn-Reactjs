@@ -21,6 +21,7 @@ import Fragments from './Fragment';
 import LIftingStateUp from './LiftingStateUp';
 import PureComponents from './PureComponent'
 import UseMemoHook from './UseMemoHook';
+import Ref from './Ref';
 
 
 
@@ -83,7 +84,9 @@ function App() {
 
       <PureComponents /><br /><br />
 
-      <UseMemoHook />
+      <UseMemoHook /><br /><br />
+
+      <Ref />
       
 
 
