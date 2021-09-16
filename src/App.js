@@ -25,6 +25,7 @@ import Ref from './Ref';
 import UseRefHook from './UseRefHook';
 import Display from './HighOrderComponent';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import PageNotFound from  './PageNotFound'
 
 
 
@@ -47,6 +48,7 @@ function App() {
     <Switch>
       <Route path='/' exact component={Home}></Route>
       <Route path='/user' exact component={User}></Route>
+      <Route path="*" exact component={PageNotFound}></Route>
     </Switch>
 
       {/* <h1>Hello guest</h1>

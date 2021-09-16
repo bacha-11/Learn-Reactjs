@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 
 
-// Pure Component use to stop rendering when the previous and current are same
+// Pure Component use to stop rendering when the data are same
 class PureComponents extends React.PureComponent{
     constructor(){
         super()
