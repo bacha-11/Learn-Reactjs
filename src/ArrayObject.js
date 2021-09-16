@@ -1,4 +1,5 @@
 import {Table} from 'react-bootstrap';
+import Students from './Students';
 
 
 function ArrayObject(){
@@ -88,6 +89,26 @@ function ArrayObject(){
                 )
             }
                 </tbody>
+            </Table>
+
+
+
+            <label>Looping compontent</label>
+            <Table>
+            
+            <tbody>
+                <tr>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>age</th>
+                </tr>
+
+            {
+                students.map((item, i)=>
+                    <Students data={item} key={i}/>
+                )
+            }
+            </tbody>
             </Table>
         </div>
     )
