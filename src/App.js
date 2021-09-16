@@ -24,6 +24,7 @@ import UseMemoHook from './UseMemoHook';
 import Ref from './Ref';
 import UseRefHook from './UseRefHook';
 import Display from './HighOrderComponent';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 
 
 
@@ -39,8 +40,16 @@ function App() {
 
 
   return (
+    <Router>
     <div className="App">
-      <h1>Hello guest</h1>
+    <Link to='/'>Home</Link><br></br>
+    <Link to='/user'>User</Link>
+    <Switch>
+      <Route path='/' exact component={Home}></Route>
+      <Route path='/user' exact component={User}></Route>
+    </Switch>
+
+      {/* <h1>Hello guest</h1>
 
       <button onClick={() => {
         setname('bacha')
@@ -94,11 +103,12 @@ function App() {
       <UseRefHook /><br /><br />
 
       <Display />
-      
+       */}
       
 
 
     </div>
+    </Router>
   );
 }
 
