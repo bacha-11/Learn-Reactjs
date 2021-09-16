@@ -18,6 +18,7 @@ import UseEffectHook from './UseEffectHook';
 import { Button } from 'react-bootstrap';
 import ArrayObject from './ArrayObject';
 import Fragments from './Fragment';
+import LIftingStateUp from './LiftingStateUp';
 
 
 
@@ -25,6 +26,12 @@ function App() {
   let [name, setname] = useState('ijaz')
   let [email, setemail] = useState('ijaz@z.com')
   let [show, setshow] = useState(true)
+
+  function getChildData(props){
+    alert("Yah I Got It "+ props)
+  }
+
+
   return (
     <div className="App">
       <h1>Hello guest</h1>
@@ -68,7 +75,9 @@ function App() {
 
       <ArrayObject /><br /><br />
 
-      <Fragments />
+      <Fragments /><br /><br />
+
+      <LIftingStateUp  data={getChildData}/>
       
 
 
