@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { Button } from "react-bootstrap";
+import ForwardRefHook from "./ForwordRefHook";
 
 
 function UseRefHook(){
@@ -14,6 +15,8 @@ function UseRefHook(){
         <div>
             <h1>UseRef Hook for functional components.</h1>
             <input type="text" ref={inputRef} /><br />
+
+            <ForwardRefHook ref={inputRef} />
             <Button onClick={handleInput}>handle Input</Button>
         </div>
     )
