@@ -22,6 +22,7 @@ import LIftingStateUp from './LiftingStateUp';
 import PureComponents from './PureComponent'
 import UseMemoHook from './UseMemoHook';
 import Ref from './Ref';
+import UseRefHook from './UseRefHook';
 
 
 
@@ -86,7 +87,9 @@ function App() {
 
       <UseMemoHook /><br /><br />
 
-      <Ref />
+      <Ref /><br /><br />
+
+      <UseRefHook />
       
 
 
