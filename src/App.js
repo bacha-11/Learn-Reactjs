@@ -20,6 +20,7 @@ import ArrayObject from './ArrayObject';
 import Fragments from './Fragment';
 import LIftingStateUp from './LiftingStateUp';
 import PureComponents from './PureComponent'
+import UseMemoHook from './UseMemoHook';
 
 
 
@@ -80,7 +81,9 @@ function App() {
 
       <LIftingStateUp  data={getChildData}/><br /><br />
 
-      <PureComponents />
+      <PureComponents /><br /><br />
+
+      <UseMemoHook />
       
 
 
