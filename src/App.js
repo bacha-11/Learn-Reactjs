@@ -26,11 +26,21 @@ import UseRefHook from './UseRefHook';
 import Display from './HighOrderComponent';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 import PageNotFound from  './PageNotFound'
+import Employees from './Employies';
 
 
 
 
 function App() {
+
+  const employies = [
+    {id:1, name:'ijaz', email:'ijaz@test.com', age:10},
+    {id:2, name:'zaid', email:'zaid@test.com', age:20},
+    {id:3, name:'nisar', email:'nisar@test.com', age:30},
+    {id:4, name:'tariq', email:'tariq@test.com', age:40}
+]
+
+
   let [name, setname] = useState('ijaz')
   let [email, setemail] = useState('ijaz@z.com')
   let [show, setshow] = useState(true)
@@ -45,9 +55,16 @@ function App() {
     <div className="App">
     <Link to='/'>Home</Link><br></br>
     <Link to='/user'>User</Link>
+    <Link to='/abc'>abc</Link>
+    {
+      employies.map((item)=>
+      <div><Link to={'/employee/'+item.id+"/"+item.name}><h3>{item.name}</h3></Link></div>
+      )
+    }
     <Switch>
       <Route path='/' exact component={Home}></Route>
       <Route path='/user' exact component={User}></Route>
+      <Route path='/employee/:id/:name' exact component={Employees}></Route>
       <Route path="*" exact component={PageNotFound}></Route>
     </Switch>
 
