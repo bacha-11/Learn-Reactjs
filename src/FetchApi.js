@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
 function FetchApi(){
@@ -29,7 +30,7 @@ function FetchApi(){
                         user.map((item)=>
                         <tr key={item.id}>
                             <td>{item.id}</td>
-                            <td>{item.title}</td>
+                            <td><Link to={"/user/"+item.id}>{item.title}</Link></td>
                             <td>{item.completed}</td>
                         </tr>
                         )

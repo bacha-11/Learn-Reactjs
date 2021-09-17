@@ -28,6 +28,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 import PageNotFound from  './PageNotFound'
 import Employees from './Employies';
 import FetchApi from './FetchApi';
+import FetchApiUserView from './FetchApiUserView';
 
 
 
@@ -67,6 +68,7 @@ function App() {
       <Route path='/user' exact component={User}></Route>
       <Route path='/fetchapi' exact component={FetchApi}></Route>
       <Route path='/employee/:id/:name' exact component={Employees}></Route>
+      <Route path='/user/:id' exact component={FetchApiUserView}></Route>
       <Route path="*" exact component={PageNotFound}></Route>
     </Switch>
 
