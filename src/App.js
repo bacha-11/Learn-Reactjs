@@ -27,6 +27,7 @@ import Display from './HighOrderComponent';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 import PageNotFound from  './PageNotFound'
 import Employees from './Employies';
+import FetchApi from './FetchApi';
 
 
 
@@ -54,8 +55,8 @@ function App() {
     <Router>
     <div className="App">
     <Link to='/'>Home</Link><br></br>
-    <Link to='/user'>User</Link>
-    <Link to='/abc'>abc</Link>
+    <Link to='/user'>User</Link><br></br>
+    <Link to='/fetchapi'>FetchApi</Link><br></br>
     {
       employies.map((item)=>
       <div><Link to={'/employee/'+item.id+"/"+item.name}><h3>{item.name}</h3></Link></div>
@@ -64,6 +65,7 @@ function App() {
     <Switch>
       <Route path='/' exact component={Home}></Route>
       <Route path='/user' exact component={User}></Route>
+      <Route path='/fetchapi' exact component={FetchApi}></Route>
       <Route path='/employee/:id/:name' exact component={Employees}></Route>
       <Route path="*" exact component={PageNotFound}></Route>
     </Switch>
