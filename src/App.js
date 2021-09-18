@@ -29,6 +29,7 @@ import PageNotFound from  './PageNotFound'
 import Employees from './Employies';
 import FetchApi from './FetchApi';
 import FetchApiUserView from './FetchApiUserView';
+import PostApiMethod from './PostApiMethod';
 
 
 
@@ -58,6 +59,7 @@ function App() {
     <Link to='/'>Home</Link><br></br>
     <Link to='/user'>User</Link><br></br>
     <Link to='/fetchapi'>FetchApi</Link><br></br>
+    <Link to='/postApiMethod'>postApiMethod</Link><br></br>
     {
       employies.map((item)=>
       <div><Link to={'/employee/'+item.id+"/"+item.name}><h3>{item.name}</h3></Link></div>
@@ -67,6 +69,7 @@ function App() {
       <Route path='/' exact component={Home}></Route>
       <Route path='/user' exact component={User}></Route>
       <Route path='/fetchapi' exact component={FetchApi}></Route>
+      <Route path='/postApiMethod' exact component={PostApiMethod}></Route>
       <Route path='/employee/:id/:name' exact component={Employees}></Route>
       <Route path='/user/:id' exact component={FetchApiUserView}></Route>
       <Route path="*" exact component={PageNotFound}></Route>
