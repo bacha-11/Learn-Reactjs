@@ -1,5 +1,6 @@
 import { Button } from "react-bootstrap";
 import { useState } from "react/cjs/react.development";
+import GetPreviousProps from "./GetPreviousProps"
 
 
 function GetPreviousState(){
@@ -21,8 +22,9 @@ function GetPreviousState(){
         <div>
             <h1>Get Previous State</h1>
             <h3>Current : {count}</h3>
-            {/* <h3>Previous : {prev}</h3> */}
+            <GetPreviousProps count={count} />
             <Button onClick={handleCounter}>Counter</Button>
+
         </div>
     )
 }
