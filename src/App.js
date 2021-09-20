@@ -30,6 +30,7 @@ import Employees from './Employies';
 import FetchApi from './FetchApi';
 import FetchApiUserView from './FetchApiUserView';
 import PostApiMethod from './PostApiMethod';
+import GetPreviousState from './getPreviousState';
 
 
 
@@ -59,6 +60,7 @@ function App() {
     <Link to='/'>Home</Link><br></br>
     <Link to='/user'>User</Link><br></br>
     <Link to='/fetchapi'>FetchApi</Link><br></br>
+    <Link to='/prev'>Previous State</Link><br></br>
     <Link to='/postApiMethod'>postApiMethod</Link><br></br>
     {
       employies.map((item)=>
@@ -69,6 +71,7 @@ function App() {
       <Route path='/' exact component={Home}></Route>
       <Route path='/user' exact component={User}></Route>
       <Route path='/fetchapi' exact component={FetchApi}></Route>
+      <Route path='/prev' exact component={GetPreviousState}></Route>
       <Route path='/postApiMethod' exact component={PostApiMethod}></Route>
       <Route path='/employee/:id/:name' exact component={Employees}></Route>
       <Route path='/user/:id' exact component={FetchApiUserView}></Route>
