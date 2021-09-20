@@ -7,6 +7,7 @@ function FetchApi(){
     let [user, setUser] = useState([])
     let [title, setTitle] = useState("")
     let [check, setCheck] = useState()
+    let [userId, setUserId] = useState(null)
 
     useEffect(()=>{
         getList()
@@ -38,11 +39,30 @@ function FetchApi(){
     }
 
 
-    function updateData(id){
+    function selectUser(id){
         let item = user[id-1]
         console.log(item)
         setTitle(item.title)
         setCheck(item.completed)
+        setUserId(item.id)
+    }
+
+    function updateUser(){
+        let data = [userId, title, check]
+        fetch(`https://jsonplaceholder.typicode.com/todos/${userId}`,{
+            method:'PUT',
+            headers:{
+                "Accept":"application/json",
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(data)
+            }).then((result)=>{
+                result.json().then((resp)=>{
+                    console.log(resp)
+                    getList()
+                })
+            })
+
     }
 
     return(
@@ -64,7 +84,7 @@ function FetchApi(){
                             <td><Link to={"/user/"+item.id}>{item.title}</Link></td>
                             <td>{item.completed}</td>
                             <td><Button onClick={()=>deleteData(item.id)}>Delete</Button></td>
-                            <td><Button onClick={()=>updateData(item.id)}>Update</Button></td>
+                            <td><Button onClick={()=>selectUser(item.id)}>Update</Button></td>
                         </tr>
                         )
                     }
@@ -72,9 +92,9 @@ function FetchApi(){
             </Table>
 
             <div>
-                <input type='text' value={title} name="title"></input><br />
-                <input type='checkbox' value={check} name="completed"></input><br />
-                <Button>Update</Button>
+                <input type='text' value={title} name="title" onChange={(e)=>setTitle(e.target.value)}></input><br />
+                <input type='checkbox' value={check} name="completed" onChange={(e)=>setCheck(e.target.value)}></input><br />
+                <Button onClick={updateUser}>Update</Button>
             </div>
         </div>
     )
